@@ -1,10 +1,13 @@
+""" merumb.py """
+
 import os
+import sys
 import configparser
 import logging
-import logging.handlers as handlers
+from logging import handlers
 
 
-logger = logging.getLogger("botsheet")
+logger = logging.getLogger("merumb")
 logger.setLevel(logging.DEBUG)
 logHandler = handlers.RotatingFileHandler(
     r".\logs\debug.log", maxBytes=5600, backupCount=2
